@@ -6,7 +6,7 @@
 #    By: flevoir <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/07/28 01:16:49 by flevoir           #+#    #+#              #
-#    Updated: 2015/07/30 16:07:16 by flevoir          ###   ########.fr        #
+#    Updated: 2015/07/30 16:15:12 by flevoir          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,13 +19,13 @@ NAME = workstation.out
 
 all: $(NAME)
 	$(CC) $(LIBSO) $(HEAD) $(SRC)
-	mv a.out $(NAME)
+	mv a.out bin/$(NAME)
 
 $(NAME):
 	$(CC) -c $(LIBS)
 
 clean:
-	rm -rf $(LIBSO) .*.swp /libs/.*.swp srcs/*.swp
+	rm -rf $(LIBSO) .*.swp /libs/.*.swp srcs/*.swp libs/*.gch libs/*.h.gch
 
 fclean: clean
 	rm -rf $(NAME)
